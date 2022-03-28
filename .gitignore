@@ -131,3 +131,6 @@ dmypy.json
 
 # Idea
 .idea/
+
+# Credentials
+/credentials.py
