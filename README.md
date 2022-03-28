@@ -5,15 +5,6 @@
 
 TODO
 
-## To run Flask application:
-```
-$ export FLASK_APP=main
-$ flask run
- * Running on http://127.0.0.1:5000/ (Press CTRL+C to
-```
-
-About correct way to run flask application [`$ flask run` vs `$ python3 main.py`](https://stackoverflow.com/questions/29882642/how-to-run-a-flask-application):
-> Both these commands ultimately start the Werkzeug development server, which as the name implies starts a simple HTTP server that should only be used during development. You should prefer using the flask run command over the app.run() method.
 ## Create and use virtual environment
 
 Python version:
@@ -32,13 +23,6 @@ Your shell prompt will change to show the name of the activated environment. Onc
 (twitter-covid-bot-venv) $ pip install Flask
 Successfully installed Flask-2.0.3 Jinja2-3.1.1 MarkupSafe-2.1.1 Werkzeug-2.0.3 click-8.0.4 itsdangerous-2.1.2
 (twitter-covid-bot-venv) $ pip freeze > requirements.txt                                                              
-(twitter-covid-bot-venv) $ cat requirements.txt                                                                       
-click==8.0.4
-Flask==2.0.3
-itsdangerous==2.1.2
-Jinja2==3.1.1
-MarkupSafe==2.1.1
-Werkzeug==2.0.3
 ```
 
 The `requirements.txt` can then be committed to version control and shipped as part of an application. Users can then install all the necessary packages with `install -r`:
@@ -51,7 +35,22 @@ To stop using the virtual environment:
 (twitter-covid-bot-venv) $ deactivate
 $ 
 ```
+## Run Flask application:
+```
+$ export FLASK_APP=main
+$ flask run
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to
+```
+
+About correct way to run flask application [`$ flask run` vs `$ python3 main.py`](https://stackoverflow.com/questions/29882642/how-to-run-a-flask-application):
+> Both these commands ultimately start the Werkzeug development server, which as the name implies starts a simple HTTP server that should only be used during development. You should prefer using the flask run command over the app.run() method.
+
+## Run tests
+```
+$ pytest
+```
 # Sources: 
 - [Markdown Guide](https://www.markdownguide.org/basic-syntax/)
 - [Virtual Environments and Packages](https://docs.python.org/3/tutorial/venv.html)
 - [Flask Quickstart](https://flask.palletsprojects.com/en/2.0.x/quickstart/)
+- [Pytest](https://docs.pytest.org/en/6.2.x/getting-started.html)
